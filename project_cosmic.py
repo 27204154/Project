@@ -35,10 +35,12 @@ def main():
             if key == ' ':
                 bullets.append(Bullet(player.xpos, -150, 0.5 * math.pi))
                 key = prior_key
+            elif key not in ('a', 's', 'd', 'x'):
+                key = prior_key
 
         # If the player clicks the 'a' of 'd' button, the player object's x position will change,
         # otherwise the player will stop moving (exception to space character). {27204154}
-        elif key == 'a':
+        if key == 'a':
             if not player.xpos <= - PLAYER_BOUNDS:
                 player.m_left()
         elif key == 'd':
