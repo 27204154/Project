@@ -4,7 +4,6 @@ from math import sin, cos
 # Bullet Constants
 BULLET_SIZE = 5
 BULLET_VELOCITY = 4
-# this is a comment
 
 
 class Bullet:
